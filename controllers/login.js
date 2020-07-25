@@ -19,7 +19,15 @@ loginRouter.post('/', async (request, response) => {
 
   response
     .status(200)
-    .send({ username: user.username, name: user.name, id: user.id });
+    .send({ 
+      username: user.username, 
+      name: user.name, 
+      id: user.id, 
+      petName: user.petName,
+      petType: user.petType,
+      petHunger: user.petHunger,
+      petHappiness: user.petHappiness
+    });
 })
 
 module.exports = loginRouter;
