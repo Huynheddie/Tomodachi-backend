@@ -17,6 +17,7 @@ usersRouter.post('/', async (request, response) => {
     petType: '',
     petHunger: -1,
     petHappiness: -1,
+    petAge: new Date()
   });
 
   const savedUser = await user.save();
@@ -31,6 +32,7 @@ usersRouter.patch('/:id', async (request, response) => {
     petType: body.petType,
     petHunger: 100,
     petHappiness: 100,
+    petAge: new Date()
   }
 
   const user = await User.findByIdAndUpdate(request.params.id, newUser, { new: true });
