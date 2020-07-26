@@ -8,7 +8,8 @@ const userSchema = new mongoose.Schema({
   petName: String,
   petType: String,
   petHunger: Number,
-  petHappiness: Number
+  petHappiness: Number,
+  petAge: Date
 })
 
 userSchema.plugin(uniqueValidator);
