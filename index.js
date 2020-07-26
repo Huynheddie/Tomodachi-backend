@@ -18,6 +18,13 @@ mongoose.connect(`mongodb+srv://user:userpassword@cluster0.buo9z.mongodb.net/vir
 app.use(cors());
 app.use(express.json());
 
+app.all('*', (req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  next();
+})
+
 app.use('/login', loginRouter);
 app.use('/users', usersRouter);
 
