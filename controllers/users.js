@@ -13,15 +13,28 @@ usersRouter.post('/', async (request, response) => {
     fullName: body.fullName,
     name: body.name,
     passwordHash,
-    petName: 'Batholomew',
-    petType: 'penguin',
-    petHunger: 100,
-    petHappiness: 100,
+    petName: '',
+    petType: '',
+    petHunger: -1,
+    petHappiness: -1,
   });
 
   const savedUser = await user.save();
 
   response.json(savedUser);
+});
+
+usersRouter.patch('/:id', async (request, response) => {
+  const body = request.body;
+  const newUser = {
+    petName: body.petName,
+    petType: body.petType,
+    petHunger: 100,
+    petHappiness: 100,
+  }
+
+  const user = await User.findByIdAndUpdate(request.params.id, newUser, { new: true });
+  response.json(user)
 })
 
 module.exports = usersRouter
