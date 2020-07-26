@@ -37,4 +37,9 @@ usersRouter.patch('/:id', async (request, response) => {
   response.json(user)
 })
 
+usersRouter.get('/:id', async (request, response) => {
+  const user = await User.findById(request.params.id);
+  response.json(user)
+})
+
 module.exports = usersRouter
