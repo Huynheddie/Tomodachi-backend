@@ -13,10 +13,10 @@ usersRouter.post('/', async (request, response) => {
     fullName: body.fullName,
     name: body.name,
     passwordHash,
-    petName: '',
-    petType: '',
-    petHunger: -1,
-    petHappiness: -1,
+    petName: 'Batholomew',
+    petType: 'penguin',
+    petHunger: 100,
+    petHappiness: 100,
   });
 
   const savedUser = await user.save();
