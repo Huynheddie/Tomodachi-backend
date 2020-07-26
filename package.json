@@ -1,22 +1,22 @@
 {
-  "name": "tomodachi-backend",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "mongoose-unique-validator": "^2.0.3"
-  },
-  "devDependencies": {
-    "mongoose": "^5.9.25",
-    "nodemon": "^2.0.4"
-  }
+	"name": "tomodachi-backend",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node index.js"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"bcryptjs": "^2.4.3",
+		"cors": "^2.8.5",
+		"express": "^4.17.1",
+		"mongoose-unique-validator": "^2.0.3",
+		"mongoose": "^5.9.25"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.4"
+	}
 }
