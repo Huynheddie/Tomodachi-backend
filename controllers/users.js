@@ -50,4 +50,9 @@ usersRouter.get('/:id', async (request, response) => {
   response.json(user)
 })
 
+usersRouter.get('/visit/:username', async (request, response) => {
+  const user = await User.findOne({ username: request.params.username });
+  response.json(user);
+})
+
 module.exports = usersRouter
